@@ -1,0 +1,524 @@
+/*=============== GOOGLE FONTS ===============*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --hue: 14;
+  --first-color: ;
+  --first-color-alt: ;
+  --title-color: hsl(234, 12%, 34%);
+  --text-color: hsl(229, 6%, 66%);
+  --text-color-light: hsl(0, 0%, 98%);
+
+  --body-color: ;
+  --container-1-color: hsl(0, 78%, 62%);
+  --container-2-color: hsl(180, 62%, 55%);
+  --container-3-color: hsl(212, 86%, 64%);
+  --container-4-color: hsl(34, 97%, 64%);
+
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.4rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 200;
+  --font-semi-bold: 500;
+  --font-black: 600;
+
+  /*========== Margins Bottom ==========*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6; /* (for example) */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  line-height: 1.4;
+  display: block;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, abbr, acronym, address, applet,
+article, aside, audio, b, big,
+blockquote, body, canvas, caption,
+center, cite, code, dd, del, details,
+dfn, div, dl, dt, em, embed, fieldset,
+figcaption, figure, footer, form, h1, h2,
+h3, h4, h5, h6, header, hgroup, html, i,
+iframe, img, ins, kbd, label, legend, li,
+mark, menu, nav, object, ol, output, p, pre,
+q, ruby, s, samp, section, small, span, strike,
+strong, sub, summary, sup, table, tbody, td,
+tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+h1,h2,h3,h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h1-font-size);
+  display: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc; /* Zum Beispiel */
+    margin: 1em 0;
+    padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+:focus { /* set here the settings for the focus (:focus = border when you press tab on the website) */
+
+}
+
+* ::-webkit-scrollbar-track {  /* set here the custom scrollbar for the website */
+
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.img-responsiv { /* Ein Bild responsiv machen */
+  width: 100%;
+  height: auto;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.disable-select {   /* Die Klasse dem ELement zuweisen, wenn der Text nicht gehighlightet werden kann  */
+  user-select: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+}
+
+.center-block { /* Zentriert jegliches Element  */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.section{
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  text-align: center;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  height: auto;
+  width: 90%; /* später entfernen falls nmötig/möglich */
+  min-height: 90%; /* später entfernen falls nmötig/möglich */
+  min-width: 1400px; /* später entfernen falls nmötig/möglich */
+  padding: 50px;
+}
+
+#main h1,.header {
+  font-size: var(--h1-font-size);
+  color: var(--title-color)
+}
+
+#main .bottom {
+  margin-top: 10px;
+}
+
+#main h2 {
+  font-weight: 200;
+}
+
+.minmax {
+  width: 35%;
+  min-width: 370px;
+  margin: 0 auto;
+}
+
+.block {
+  text-align: left;
+  width: 420px;
+  height: auto;
+  min-height: 200px;
+  margin-top: 30px;
+  padding: 25px 30px 10px 30px;
+  box-shadow: 0px 1px 1px var(--container-2-color);
+  border-radius: 10px;
+}
+
+.block h2 {
+  margin-bottom: 7px;
+  font-weight: 600!important;
+  color: var(--title-color);
+}
+
+.block p {
+  font-weight: 200!important;
+}
+
+.flex-column {
+  margin: 0 30px 0 30px;
+}
+
+.flex-center {
+  margin-top: 20px;
+}
+
+.supervisor {
+  border-top: 6px solid var(--container-2-color);
+}
+
+.karma {
+  border-top: 6px solid var(--container-4-color);
+}
+
+.team-builder {
+  border-top: 6px solid var(--container-1-color);
+}
+
+.calculator {
+  border-top: 6px solid var(--container-3-color)
+}
+
+.flex-end-absolute {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.flex-end {
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  margin-top: 80px;
+}
+
+.supervisor-img {
+  background-image: url("../img/icon-supervisor.svg");
+  background-repeat: no-repeat;
+}
+
+.team-builder-img {
+  background-image: url("../img/icon-team-builder.svg");
+  background-repeat: no-repeat;
+}
+
+.karma-img {
+  background-image: url("../img/icon-karma.svg");
+  background-repeat: no-repeat;
+}
+
+.calculator-img {
+  background-image: url("../img/icon-calculator.svg");
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1310px) {
+  .full-height {
+    height: auto;
+  }
+
+  .flex-center {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-column {
+    margin: 0;
+  }
+
+  .block {
+    text-align: left;
+    width: 460px;
+    height: auto;
+    margin-top: 30px;
+    padding: 25px 30px 10px 30px;
+    box-shadow: 0px 1px 1px var(--container-2-color);
+    border-radius: 10px;
+  }
+
+  #main {
+    height: auto;
+    width: 90%; /* später entfernen falls nmötig/möglich */
+    min-height: 90%; /* später entfernen falls nmötig/möglich */
+    min-width: auto; /* später entfernen falls nmötig/möglich */
+    padding: 50px;
+  }
+
+  .minmax {
+    width: 95%;
+    min-width: auto;
+  }
+
+}
+
+@media (max-width: 470px) {
+  .block {
+    text-align: left;
+    width: auto;
+    width: 400px!important;
+    min-height: 250px;
+    margin-top: 30px;
+    padding: 25px 30px 10px 30px;
+    box-shadow: 0px 1px 1px var(--container-2-color);
+    border-radius: 10px;
+  }
+
+  .minmax {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .flex-end {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .block {
+    max-width: 300px;
+    width: auto;
+  }
+
+  .minmax {
+    width: 140%;
+  }
+}
+
+@media (max-width: 370px) {
+  .block {
+    width: 450px!important;
+  }
+
+  #main {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
